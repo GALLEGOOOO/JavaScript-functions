@@ -9,6 +9,6 @@
  * @returns {number} - The total number of words in the string.
  */
 export default function getTotalWordsFromString(inputString) {
-  const wordsArray = inputString.split(/\s+/);
-  return wordsArray.length;
+  const numberOfWords = inputString.split(/\s+/);
+  return numberOfWords.length;
 }
