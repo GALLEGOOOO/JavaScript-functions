@@ -22,7 +22,3 @@ jobs:
         run: npm install
       - name: Lint code
         run: npm run lint
-      - name: List files
-        run: ls
-      - name: Node version
-        run: node -v
