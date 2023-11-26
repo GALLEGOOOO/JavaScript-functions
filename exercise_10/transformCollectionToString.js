@@ -19,18 +19,17 @@ import checkCollectionHasElements from "../exercise_06/checkCollectionHasElement
  * output: ""
  */
 /**
- *
- * @param {*} collection
- * @returns string
+ * Transforma una colección en una cadena.
+ * Si el array tiene elementos, devuelve el array como una cadena, unidos por '|' (carácter de barra vertical).
+ * De lo contrario, devuelve una cadena vacía.
+ * @param {*} collection - La colección de entrada.
+ * @returns {string} - La cadena transformada.
  */
-
 const transformCollectionToString = function (collection) {
-  const arrayLength = checkCollectionHasElements(collection);
-  let message = "";
-  if (arrayLength === false) {
-    message = collection.join(" | ");
+  if (checkCollectionHasElements(collection)) {
+    return collection.join(" | ");
   }
-  return message;
+  return "";
 };
 
 export default transformCollectionToString;

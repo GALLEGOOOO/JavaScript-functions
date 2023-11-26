@@ -23,31 +23,20 @@ import generateRandomNumberInRange from "../exercise_03/generateRandomNumberInRa
  */
 
 /**
- * generate a random number (in between 0-100) and sum it to given number
-  - if sum result exceeds 100, then return message "Sum with value N exceeds in N from number 100"
-  - otherwise, return message "Sum with value N is left in N from number 100
-  * @param {input} value
-  * @returns string
-*/
-
+ * Generate a random number (in between 0-100) and sum it to given number.
+ * If the sum result exceeds 100, then return a message "Sum with value N exceeds by N from number 100".
+ * Otherwise, return a message "Sum with value N is left by N from number 100".
+ * @param {number} value - The input number.
+ * @returns {string} - The result message.
+ */
 const getDistanceMessageFromSumTo100 = function (value) {
   const randomNumber = generateRandomNumberInRange(100) + value;
-  let diference = 100 - randomNumber;
-  let message =
-    "Sum with value " +
-    randomNumber +
-    " isd left in " +
-    diference +
-    " from number 100";
-  if (randomNumber > 100) {
-    diference = randomNumber - 100;
-    message =
-      "Sum with value " +
-      randomNumber +
-      " exceeds in " +
-      diference +
-      " from number 100";
-  }
+  const difference = Math.abs(100 - randomNumber);
+  const message =
+    randomNumber > 100
+      ? `Sum with value ${randomNumber} exceeds by ${difference} from number 100`
+      : `Sum with value ${randomNumber} is left by ${difference} from number 100`;
+
   return message;
 };
 

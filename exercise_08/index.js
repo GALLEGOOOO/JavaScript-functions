@@ -1,4 +1,5 @@
-import getTotalWordsFromString from "./getTotalWordsFromString.js";
+import formatStringByWordsLength from "./formatStringByWordsLength.js";
+
 console.log(
-  getTotalWordsFromString("Hello, my name is Arnau and im working on isWolk")
+  formatStringByWordsLength("Hello, my name is Arnau and I'm working on isWolk")
 );
