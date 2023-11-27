@@ -5,7 +5,4 @@ const result1 = transformCollectionToString([
   "grapes",
   "strawberries",
 ]);
-console.log(result1);
-
-const result2 = transformCollectionToString([]);
-console.log(result2);
+console.log(result1); // apple | grapes | strawberries
