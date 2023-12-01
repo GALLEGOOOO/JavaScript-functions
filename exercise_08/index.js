@@ -6,5 +6,5 @@ console.log(
 
 
 console.log(
-  formatStringByWordsLength("HELLO, IM ARNAU", 5) //hello, my name is arnau and i'm working on iswolk
+  formatStringByWordsLength("HELLO, IM ARNAU", 5) //hello, im arnau
 );
