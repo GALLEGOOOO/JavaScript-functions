@@ -1,23 +1,22 @@
 import generateRandomNumberInRange from "../exercise_03/generateRandomNumberInRange.js";
 import getDistanceFromThreshold from "../exercise_01/getDistanceFromThreshold.js";
+import isGreaterThan from "../exercise_04/isGreaterThan.js";
 
 /**
- * Generate a random number (in between 0-100) and sum it to given number.
- * If the sum result exceeds 100, then return a message "Sum with value N exceeds by N from number 100".
- * Otherwise, return a message "Sum with value N is left by N from number 100".
- * @param {number} value - The input number.
- * @returns {string} - The result message.
+ * generate a random number (in between 0-100) and sum it to given number
+ * @param {number} value
+ * @returns {string}
  */
 
-const getDistanceMessageFromSumTo100 = function (value) {
-  const randomNumber = generateRandomNumberInRange(100) + value;
-  const difference = getDistanceFromThreshold(randomNumber, 100);
-  const message =
-    randomNumber > 100
-      ? `Sum with value ${randomNumber} exceeds by ${difference} from number 100`
-      : `Sum with value ${randomNumber} is left by ${difference} from number 100`;
+function getDistanceMessageFromSumTo100(value) {
+  const random = generateRandomNumberInRange(100);
+  const sum = value + random;
+  const exceeded = isGreaterThan(sum, 100);
+  const difference = getDistanceFromThreshold(sum, 100);
 
-  return message;
-};
+  return `Sum with value ${sum} ${
+    exceeded ? "exceeds" : "is left in"
+  } ${difference} from number 100`;
+}
 
 export default getDistanceMessageFromSumTo100;
